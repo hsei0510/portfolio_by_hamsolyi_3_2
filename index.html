@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./css/initial.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/style.css">
     <script type="text/javascript" src="./js/jquery_3.5.1.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
@@ -42,9 +43,21 @@
 
     <section id="intro">
       <article>
-        <h2>About My Company</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a href="#profile" class="button ani-btn">get started</a>
+      <div class="video_wrap">
+        <video id="spotVideo" autoplay="" muted="" loop="" data-autoplay="" playsinline="" poster="./img/about/about-plan_4.png" class="video" src="./img/about/about-plan_4.mp4">
+          <source src="" type="video/mp4" width="1295" height="1163">
+            Your browser does not support the video tag.
+          </video>
+        <!-- <video id="spotVideo" autoplay="" muted="" loop="" data-autoplay="" playsinline="" poster="./img/about/about-plan_4.png" class="video">
+          <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> -->
+          <div class="article-box">
+            <h2>Welcome to<br>Hamsolyi's_Portfolio</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#profile" class="button ani-btn">get started</a>
+        </div>
+        </div>
       </article>
     </section>
 
@@ -54,9 +67,9 @@
           <h2>Profile</h2>
           <div class="column">
             <div class="inner none-type">
-              <img src="./img/profile/img01.jpg" alt="my profile img"  class="shadow">
-              <h3>Cherry Park</h3>
-              <div id="job">Web Publisher / front epilogue development</div>
+              <img src="./img/profile/img01.png" alt="my profile img"  class="shadow">
+              <h3>Solyi Ham</h3>
+              <div id="job">Web Designer / Web Publisher</div>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehepilogueerit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
           </div>
@@ -67,31 +80,38 @@
           <h2>skill</h2>
           <div class="column">
             <div class="inner none-type progressbar">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehepilogueerit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
               <div class="items-wrap">
                 <div class="items">
-                  <div class="title">HTML5</div>
-                  <div class="percent">50%</div>
+                  <div class="title">Web Publishing</div>
+                  <div class="percent">70%</div>
                 </div>
               </div>
               <div class="items-wrap">
                 <div class="items">
-                  <div class="title">CSS3</div>
+                  <div class="title">Web Design</div>
                   <div class="percent">80%</div>
                 </div>
               </div>
               <div class="items-wrap">
                 <div class="items">
-                  <div class="title">javascript</div>
+                  <div class="title">Graphic Design</div>
                   <div class="percent">90%</div>
                 </div>
               </div>
               <div class="items-wrap">
                 <div class="items">
-                  <div class="title">sass</div>
-                  <div class="percent">100%</div>
+                  <div class="title">Editorial Design</div>
+                  <div class="percent">70%</div>
                 </div>
               </div>
+              <div class="items-wrap">
+                <div class="items">
+                  <div class="title">Video Design</div>
+                  <div class="percent">60%</div>
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehepilogueerit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
           </div>
         </div>
@@ -99,7 +119,7 @@
       <section id="tools">
         <div class="row">
           <h2>tools</h2>
-          <div class="column">
+          <!-- <div class="column">
             <div class="inner none-type">
               <img src="./img/tools/img01.png" alt="my tool img">
               <h3>Tools</h3>
@@ -126,6 +146,50 @@
               <h3>Tools</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+          </div> -->
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/tools/img01.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tools/img02.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tools/img03.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tools/img04.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tools/img04.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tools/img04.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tools/img04.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tools/img04.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/tools/img04.png" alt="my tool img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -193,7 +257,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
-          <div class="column">
+          <!-- <div class="column">
             <div class="inner none-type">
               <img src="./img/portFolio/img01.jpg" alt="portFolio img01" class="shadow">
               <h3>portfolio no.5</h3>
@@ -220,7 +284,7 @@
               <h3>portfolio no.8</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <section id="epilogue">
@@ -296,11 +360,9 @@
             <div class="column">
               <h4>contact us</h4>
               <p>
-                A108 adam street <br>
-                New York, NY 535022 <br>
-                United states <br>
-                <strong>phone :</strong><a href="tel:+82-010-0000-0000">+82-010-0000-0000</a><br>
-                <strong>E-mail :</strong><a href="mailto:mymail@naver.com">mymail@naver.com</a><br>
+                대구광역시 북구 내곡로 70<br>
+                <strong>phone : </strong><a href="tel:+82-010-7682-0400">+82-010-7682-0400</a><br>
+                <strong>E-mail : </strong><a href="mailto:hsei0510@naver.com">hsei0510@naver.com</a><br>
               </p>
             </div>
             <!-- news -->
@@ -317,21 +379,40 @@
       <div class="container">
         <!-- footer 하단 영역 -->
         <div class="copyright">
-          &copy;copyright <strong>mypage</strong> All Rights Reserved.
+          &copy;copyright <strong>Solyi Ham</strong> All Rights Reserved.
         </div>
         <div class="credits">
-          Designed By <a href="mailto:aaa@naver.com">mypage</a>.
+          Designed By <a href="mailto:hsei0510@naver.com">hsei0510</a>.
         </div>
       </div>
     </footer>
 
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-    </div>
+
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="./js/swiper.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: { // 자동 플레이
+          delay: 6000, // 기준 ms 2500ms -> 2.5초
+        },
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 
   </body>
 </html>

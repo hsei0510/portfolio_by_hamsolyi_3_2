@@ -48,7 +48,7 @@ input[type=checkbox]#gnbcheck { display: none; }
   top: 16px;  /*50%로 표기해도됨, 상하 가운데 정렬*/
   height: 1.6px;
   width: 32px;
-  background: #fff;
+  background: #111;
   transform: translateY(-50%) rotate(45deg);
   cursor: pointer;
 }
@@ -100,13 +100,16 @@ input[type=checkbox]#gnbcheck { display: none; }
   display: inline-block;
   padding: 8px 32px;
   border-radius: 32px;
-  background: #18d26e;
+  /* background: #18d26e; */
+  border: 3px solid #fff;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
   transition: 0.5s;
 }
 .button:hover {
   background: #fff;
-  color: #18d26e;
+  /* color: #666; */
+  color: #e65c00;
+  /* color: #f9d423; */
 }
 
 
@@ -158,7 +161,7 @@ input[type=checkbox]#gnbcheck { display: none; }
 /* section ---------------------------------*/
 /*  section active interaction -------------*/
 section.active .row .column .inner.progressbar .items-wrap:nth-of-type(1) .items {
-  width: 50%;
+  width: 70%;
 }
 section.active .row .column .inner.progressbar .items-wrap:nth-of-type(2) .items {
   width: 80%;
@@ -169,8 +172,13 @@ section.active .row .column .inner.progressbar .items-wrap:nth-of-type(3) .items
   transition-delay: .5s;
 }
 section.active .row .column .inner.progressbar .items-wrap:nth-of-type(4) .items {
-  width: 100%;
+  width: 70%;
   transition-delay: .75s;
+}
+
+section.active .row .column .inner.progressbar .items-wrap:nth-of-type(5) .items {
+  width: 60%;
+  transition-delay: 1.0s;
 }
 
 section.active .row .column {
@@ -200,20 +208,63 @@ section:nth-child(odd) {
 }
 
 /*section #intro---------------------------------*/
-section > article {
+section#intro {
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-image: url('../img/intro/3.jpg');  */
+  /* 주의! background: url('../img/intro/3.jpg'); 할때는 맨 위로 올려서써야 적용됨 */
+  background-color: #222;
+  position: relative;
+}
+
+section#intro > article {
   color: #fff;
   text-align: center;
-  padding: 0 20%; /*좌우여백을 px로하면 넓은화면에서는 큰 의미가없어서, 상대적으로 처리하려면 %로 해주면된다*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
-section > article > h2 {
-  font-size: 40px;
+section#intro article .video_wrap {
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0; */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+section#intro article .video_wrap .video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+section#intro > article .video_wrap > .article-box {
+  position: absolute;
+  top: 35%;
+  margin: 0 20%; /*좌우여백을 px로하면 넓은화면에서는 큰 의미가없어서, 상대적으로 처리하려면 %로 해주면된다*/
+}
+
+section#intro > article .video_wrap > .article-box h2 {
+  font-size: 60px;
   text-shadow: 1px 1px rgba(0,0,0,0.5);
+  /* padding: 0 20%; */
 }
 
-section > article > p {
+section#intro > article .video_wrap > .article-box p {
   font-size: 20px;
   text-shadow: 1px 1px rgba(0,0,0,0.5);
+  /* padding: 0 20%; */
 }
 
 /* main section----------------------------------*/
@@ -299,18 +350,11 @@ section .row .column .inner img.shadow {
 }
 
 /* main section 개별*/
-section#intro {
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-image: url('../img/intro/3.jpg');  */
-  /* 주의! background: url('../img/intro/3.jpg'); 할때는 맨 위로 올려서써야 적용됨 */
-  background-color: #212837;
-}
-
 section#profile {
+  background-image: url('../img/bg/profile_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../img/bg/profile_bg.jpg');
+  background-position: center;
 }
 
 section#profile .row .column .inner #job {
@@ -335,9 +379,10 @@ section#profile:before {
 }
 
 section#skill {
-  background-image: url('../img/bg/my_skill_bg.jpg');
+  background-image: url('../img/bg/my_skill_bg_5.jpg');
   background-size: cover; /*커버는 배경이 전체영역을 덮을수있게, 컨테이너는 이미지를 다보여주는것*/
   background-attachment: fixed; /*스크롤함에따라 배경이 다 보이는것?*/
+  background-position: center;
 }
 
 section#skill .row > h2 {
@@ -384,7 +429,10 @@ section#skill .row .column .inner > p {
 .progressbar .items .percent {
   /* float: right; */
 }
-.progressbar .items-wrap:nth-of-type(1) .items {
+.progressbar .items-wrap .items {
+  background: linear-gradient(25deg, #ffe259, #ffa751);
+}
+/* .progressbar .items-wrap:nth-of-type(1) .items {
   background: #6C4AB6;
 }
 .progressbar .items-wrap:nth-of-type(2) .items {
@@ -396,11 +444,15 @@ section#skill .row .column .inner > p {
 .progressbar .items-wrap:nth-of-type(4) .items {
   background: #B9E0FF;
 }
+.progressbar .items-wrap:nth-of-type(5) .items {
+  background: #B9E0FF;
+} */
 
 
 /* footer ---------------------------------------*/
 #footer {
-  background: #000;
+  /* background: #000; */
+  background: #111;
   color: #fff;
   font-size: 14px;
 }
@@ -411,7 +463,7 @@ section#skill .row .column .inner > p {
 }
 
 #footer .container {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -440,7 +492,8 @@ section#skill .row .column .inner > p {
   font-size: 34px;
   font-weight: 700;
   letter-spacing: 3px;
-  border-left: 4px solid #18d26e;
+  /* border-left: 4px solid #18d26e; */
+  border-left: 4px solid #f9d423;
   padding: 2px 0px 2px 10px; /*상 우 아래 좌*/
 }
 
@@ -469,7 +522,8 @@ section#skill .row .column .inner > p {
 
 #footer .container .row .column h4:after {
   width: 60px;
-  background: #18d26e;
+  /* background: #18d26e; */
+  background: #f9d423;
 }
 
 #footer .container .row .column ul li {
@@ -507,7 +561,8 @@ section#skill .row .column .inner > p {
   width: 35%;
   text-align: center;
   color: #fff;
-  background: #18d26e;
+  /* background: #18d26e; */
+  background: #f9d423;
   cursor: pointer;
 }
 
@@ -529,7 +584,7 @@ section#skill .row .column .inner > p {
   /* mobile gnb */
   #mobile-close-btn { display: block; }
   #gnbbtn { display: block; }
-  input[type=checkbox]#gnbcheck:checked ~ #gnb { left: 0; }
+  input[type=checkbox]#gnbcheck:checked ~ #gnb { right: 0; }
   /* input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(2) { display: none; } */
   /*실습 : 남은 span 태그를 활용하여 close 버튼을 만드시오.*/
   /* input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span { top: 50%; }
@@ -539,26 +594,53 @@ section#skill .row .column .inner > p {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -100%;
-    width: 100%;
+    right: -100%;
+    /* width: 100%; */
     /* 모바일 슬라이드박스가 화면 전체를 다 덮을때 width 100%하는편*/
-    /* width: 80%; */
+    width: 80%;
     /* 햄버거버튼이 x자로 바꾸는 코드일때 width 80%하는편*/
-    background: rgba(0,0,0,0.9);
+    background: rgba(255,255,255,0.9);
     transition: 0.5s ease-in-out;
   }
   #gnb ul {
     padding-top: 50px;
+    margin-right: 40px;
   }
   #gnb ul li {
     width: 100%;
     padding-left: 10px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: right;
   }
+  #gnb ul li a {
+    color: #111;
+  }
+  #gnb ul li a:hover {
+    /* color: #18d26e; */
+    color: #e65c00;
+    /* color: #f9d423; */
+  }
+
+  section#intro > article .video_wrap > .article-box h2 {
+    font-size: 32px;
+  }
+
+  section#intro > article .video_wrap > .article-box p {
+    font-size: 16px;
+  }
+
 }
 
 @media screen and ( max-width: 380px ) {
   section#tools .row .column { flex: 100%; }
+
+  section#intro > article .video_wrap > .article-box h2 {
+    font-size: 22px;
+  }
+
+  section#intro > article .video_wrap > .article-box p {
+    font-size: 14px;
+  }
+
 }
 /*----------------------------------------------*/

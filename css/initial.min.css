@@ -19,5 +19,7 @@ a {
 }
 
 a:hover{
-  color: #18d26e;
+  /* color: #18d26e; */
+  color: #e65c00;
+  /* color: #f9d423; */
 }
